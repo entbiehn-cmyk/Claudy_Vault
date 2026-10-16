@@ -1,0 +1,56 @@
+# =========================================================
+# Obsidian 개인 보관함용 .gitignore
+# 원칙: 노트와 "의도한 설정"은 버전 관리, 자주 바뀌는 상태·캐시는 제외
+# =========================================================
+
+# --- Obsidian: 창/탭 상태 (열 때마다 바뀌어 불필요한 커밋 유발) ---
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/workspaces.json
+.obsidian/*.bak
+
+# --- Obsidian: 캐시·휴지통 ---
+.obsidian/cache/
+.trash/
+
+# --- Obsidian: 플러그인 ---
+# 커뮤니티 플러그인 코드는 설치로 복원 가능하므로 제외하고,
+# 설정(data.json)과 목록(community-plugins.json)만 기록
+.obsidian/plugins/*/main.js
+.obsidian/plugins/*/styles.css
+.obsidian/plugins/*/node_modules/
+# 플러그인 설정에 API 키를 넣는 경우 해당 플러그인만 아래처럼 제외
+# .obsidian/plugins/<plugin-id>/data.json
+
+# --- Claude Code: 로컬 전용 설정 ---
+.claude/settings.local.json
+CLAUDE.local.md
+
+# --- 민감 정보 ---
+.env
+.env.*
+*.pem
+*.key
+
+# --- OS 생성 파일 ---
+.DS_Store
+.AppleDouble
+._*
+Thumbs.db
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/
+*~
+.directory
+
+# --- 임시·백업·로그 ---
+*.tmp
+*.temp
+*.swp
+*.log
+~$*
+
+# --- 대용량 첨부 (필요 시 주석 해제 또는 Git LFS 사용) ---
+# 7. Attachments/**/*.mp4
+# 7. Attachments/**/*.mov
+# 7. Attachments/**/*.zip
